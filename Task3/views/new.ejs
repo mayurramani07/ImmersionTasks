@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Vehicle</title>
+</head>
+<body>
+  <h1>Add a New Vehicle</h1>
+  <form action="/vehicles" method="POST">
+    <label>Name:</label><input type="text" name="name" required><br>
+    <label>Price:</label><input type="number" name="price" required><br>
+    <label>Image URL:</label><input type="text" name="image"><br>
+    <label>Description:</label><textarea name="desc"></textarea><br>
+    <label>Brand:</label><input type="text" name="brand"><br>
+    <button type="submit">Create</button>
+  </form>
+</body>
+</html>

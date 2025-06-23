@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vehicles</title>
+</head>
+<body>
+  <h1>All Vehicles</h1>
+  <a href="/vehicles/new">Add New Vehicle</a>
+  <ul>
+    <% vehicles.forEach(vehicle => { %>
+      <li>
+        <h3><%= vehicle.name %> - ₹<%= vehicle.price %> - <%= vehicle.brand %></h3>
+        <img src="<%= vehicle.image %>" width="200" />
+        <p><%= vehicle.desc %></p>
+        <a href="/vehicles/<%= vehicle.id %>/edit">Edit</a>
+        <form method="POST" action="/vehicles/<%= vehicle.id %>?_method=DELETE" style="display:inline;">
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+    <% }); %>
+  </ul>
+</body>
+</html>
